@@ -1,0 +1,6 @@
+com\demo\springcloud\alibaba\controller\EchoController.class
+com\demo\springcloud\alibaba\ProviderApplication.class
+com\demo\springcloud\alibaba\dao\UserDao.class
+com\demo\springcloud\alibaba\entity\User.class
+com\demo\springcloud\alibaba\service\UserService.class
+com\demo\springcloud\alibaba\controller\UserController.class

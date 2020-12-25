@@ -1,0 +1,4 @@
+com\demo\springcloud\alibaba\ConfigApplication.class
+com\demo\springcloud\alibaba\controller\ConfigController.class
+com\demo\springcloud\alibaba\test\TestController.class
+com\demo\springcloud\alibaba\test\TestController$Student.class
