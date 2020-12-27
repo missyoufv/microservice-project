@@ -19,7 +19,7 @@ public class UserController {
 
 
     @GetMapping("/queryById")
-    public String queryUserInfo(@RequestParam(value = "id") String id) {
+    public Object queryUserInfo(@RequestParam(value = "id") String id) {
         if (StringUtils.isEmpty(id)) {
             return "param is empty";
         }
@@ -28,6 +28,6 @@ public class UserController {
         if (user == null) {
             return "record is not exist";
         }
-        return user.toString();
+        return user;
     }
 }

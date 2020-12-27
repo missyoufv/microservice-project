@@ -3,6 +3,7 @@ package com.demo.springcloud.alibaba.controller;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -10,14 +11,22 @@ import org.springframework.web.bind.annotation.RestController;
 public class ConfigController {
 
 
-    @Value("${user.name}")
-    private String name;
+    @Value("${config.info}")
+    private String message;
 
-    @Value("${user.age}")
-    private String age;
+    @Value("${common.info:''}")
+    private String commonInfo;
 
     @GetMapping(value = "configInfo")
     public String configInfo() {
-        return "config name : "+ name + " age: " +age;
+        String result = " get data from nacos config center, " + message;
+        return result;
+    }
+
+
+    @GetMapping(value = "commonConfigInfo")
+    public String commonConfigInfo() {
+        String result = " get data from common nacos config, " + commonInfo;
+        return result;
     }
 }

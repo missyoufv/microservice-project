@@ -5,7 +5,6 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-//@Component
 @FeignClient(value ="provider-application")
 public interface UserService {
 

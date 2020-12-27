@@ -42,6 +42,7 @@ public class TestController {
     @NacosInjected
     private NamingService namingService;
 
+
     AtomicInteger count = new AtomicInteger(0);
 
 
@@ -102,9 +103,10 @@ public class TestController {
     }
 
     @ResponseBody
-    @GetMapping("feignInvoke")
+    @GetMapping("/feignInvoke")
     public Object feignInvoke(@RequestParam(name = "id" ) String id) {
         return userService.queryUserInfo(id);
     }
+
 
 }
